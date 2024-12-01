@@ -102,6 +102,7 @@ one_shot = true
 position = Vector2(0, 3)
 offset = Vector2(0, -32)
 zoom = Vector2(0.8, 0.8)
+process_callback = 0
 position_smoothing_enabled = true
 
 [node name="Hitbox" type="Area2D" parent="."]
