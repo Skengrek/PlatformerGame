@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" load_steps=2 format=3 uid="uid://mokup07sxmfk"]
+
+[ext_resource type="Script" path="res://player/PlayerMovementData.gd" id="1_msfnn"]
+
+[resource]
+script = ExtResource("1_msfnn")
+speed = 150.0
+acceleration = 600
+friction = 1000
+air_friction = 100
+jump_velocity = -250.0
+gravity_scale = 1.0
