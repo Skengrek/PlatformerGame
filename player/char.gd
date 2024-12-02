@@ -58,14 +58,19 @@ func apply_gravity(delta):
 
 
 func update_animation(input_axis):
-	if input_axis != 0:
-		animated_sprite_2d.flip_h = (input_axis < 0)
+	if velocity.x != 0:
+		animated_sprite_2d.flip_h = (velocity.x < 0)
 		animated_sprite_2d.play("run")
 	else:
 		animated_sprite_2d.play("idle")
 	
 	if not is_on_floor():
-		animated_sprite_2d.play("jump")
+		if is_on_wall():
+			var wall_normal = get_wall_normal()
+			print(wall_normal)
+			animated_sprite_2d.play("walled")
+		else:
+			animated_sprite_2d.play("jump")
 
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
