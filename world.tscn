@@ -1,10 +1,8 @@
-[gd_scene load_steps=8 format=4 uid="uid://dub1jyrgm31qr"]
+[gd_scene load_steps=6 format=3 uid="uid://dub1jyrgm31qr"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_q1wwd"]
 [ext_resource type="PackedScene" uid="uid://3sheegjfhty7" path="res://player/char.tscn" id="2_nlxma"]
 [ext_resource type="Resource" uid="uid://mokup07sxmfk" path="res://player/DefaultMovementData.tres" id="3_3jcx8"]
-[ext_resource type="PackedScene" uid="uid://cecykvtopnrf7" path="res://Hazards/spike.tscn" id="4_p586w"]
-[ext_resource type="PackedScene" uid="uid://b4jytuw000d02" path="res://Hazards/heart.tscn" id="5_ivns4"]
 [ext_resource type="PackedScene" uid="uid://yptnujae8r7f" path="res://GUI/level_completed.tscn" id="6_hmj0k"]
 [ext_resource type="PackedScene" uid="uid://b047vrbgjy4r4" path="res://level_tile_map.tscn" id="7_pchxj"]
 
@@ -12,44 +10,10 @@
 script = ExtResource("1_q1wwd")
 
 [node name="Player" parent="." instance=ExtResource("2_nlxma")]
-position = Vector2(40, 120)
 collision_layer = 2
 collision_mask = 5
 floor_snap_length = 2.0
 movement_data = ExtResource("3_3jcx8")
-
-[node name="Spike" parent="." instance=ExtResource("4_p586w")]
-position = Vector2(129, 176)
-
-[node name="Spike" parent="Spike" instance=ExtResource("4_p586w")]
-position = Vector2(16, 0)
-
-[node name="Spike" parent="Spike/Spike" instance=ExtResource("4_p586w")]
-position = Vector2(16, 0)
-
-[node name="Spike" parent="Spike/Spike/Spike" instance=ExtResource("4_p586w")]
-position = Vector2(8, 0)
-
-[node name="Spike2" parent="Spike/Spike/Spike" instance=ExtResource("4_p586w")]
-position = Vector2(16, 0)
-
-[node name="Spike2" parent="." instance=ExtResource("4_p586w")]
-position = Vector2(240, 144)
-
-[node name="Spike" parent="Spike2" instance=ExtResource("4_p586w")]
-position = Vector2(8, 0)
-
-[node name="Spike2" parent="Spike2" instance=ExtResource("4_p586w")]
-position = Vector2(16, 0)
-
-[node name="Heart" parent="." instance=ExtResource("5_ivns4")]
-position = Vector2(157, 103)
-
-[node name="Heart3" parent="." instance=ExtResource("5_ivns4")]
-position = Vector2(327, 33)
-
-[node name="Heart2" parent="." instance=ExtResource("5_ivns4")]
-position = Vector2(48, 34)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -57,4 +21,3 @@ position = Vector2(48, 34)
 visible = false
 
 [node name="LevelTileMap" parent="." instance=ExtResource("7_pchxj")]
-tile_map_data = PackedByteArray("AAAAAAkAAAAEAAIAAAABAAkAAAABAAAAAAACAAkAAAABAAAAAAADAAkAAAABAAAAAAAEAAkAAAABAAAAAAAFAAkAAAABAAAAAAAGAAkAAAABAAAAAAAGAAoAAAABAAEAAAAGAAsAAAABAAIAAAAFAAsAAAABAAIAAAAFAAoAAAABAAEAAAAEAAoAAAABAAEAAAADAAoAAAABAAEAAAACAAoAAAABAAEAAAABAAoAAAABAAEAAAAAAAoAAAAAAAEAAAAEAAsAAAABAAIAAAADAAsAAAABAAIAAAACAAsAAAABAAIAAAABAAsAAAABAAIAAAAAAAsAAAAAAAIAAAAHAAsAAAAFAAMAAAAIAAsAAAABAAMAAAAJAAsAAAABAAMAAAAKAAsAAAABAAMAAAALAAsAAAABAAMAAAAMAAsAAAAGAAMAAAAMAAoAAAAAAAEAAAAMAAkAAAAAAAEAAAAMAAgAAAAAAAAAAAANAAgAAAABAAAAAAAOAAgAAAACAAAAAAAOAAkAAAAFAAIAAAAOAAoAAAABAAEAAAAOAAsAAAABAAIAAAANAAsAAAABAAIAAAANAAoAAAABAAEAAAANAAkAAAABAAEAAAAHAAoAAAACAAEAAAAHAAkAAAACAAAAAAAAAAgAAAADAAEAAAAAAAcAAAADAAEAAAAAAAYAAAADAAEAAAAAAAUAAAADAAEAAAAAAAQAAAADAAEAAAAAAAMAAAADAAEAAAAAAAIAAAADAAEAAAAAAAEAAAADAAEAAAAAAAAAAAAEAAAAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAABAAMAAAAEAAAAAAAHAAAAAAAEAAEAAAADAAEAAAAEAAIAAAADAAEAAAAEAAMAAAADAAEAAAAEAAQAAAADAAEAAAAEAAUAAAADAAEAAAAEAAYAAAADAAIAAAAPAAkAAAABAAAAAAAQAAkAAAABAAAAAAARAAkAAAAGAAIAAAARAAgAAAAAAAEAAAARAAcAAAAAAAEAAAARAAYAAAAAAAAAAAASAAYAAAAGAAIAAAASAAUAAAAAAAAAAAATAAUAAAABAAAAAAAUAAUAAAAGAAIAAAAUAAQAAAAAAAAAAAAVAAQAAAAGAAIAAAAVAAMAAAAAAAAAAAAWAAQAAAABAAEAAAAWAAMAAAABAAAAAAAXAAMAAAACAAAAAAAXAAQAAAACAAEAAAAXAAUAAAACAAEAAAAWAAYAAAABAAEAAAAWAAcAAAABAAEAAAAWAAgAAAABAAEAAAAWAAkAAAABAAEAAAAXAAYAAAACAAEAAAAXAAcAAAACAAEAAAAXAAgAAAACAAEAAAAXAAkAAAACAAEAAAAXAAoAAAACAAEAAAAXAAsAAAACAAIAAAAWAAsAAAABAAIAAAAVAAsAAAABAAIAAAAUAAsAAAABAAIAAAATAAsAAAABAAIAAAASAAsAAAABAAIAAAARAAsAAAABAAIAAAAQAAsAAAABAAIAAAAPAAsAAAABAAIAAAAPAAoAAAABAAEAAAAQAAoAAAABAAEAAAARAAoAAAABAAEAAAASAAoAAAABAAEAAAATAAoAAAABAAEAAAAUAAoAAAABAAEAAAAVAAoAAAABAAEAAAAWAAoAAAABAAEAAAAVAAkAAAABAAEAAAAUAAkAAAABAAEAAAATAAkAAAABAAEAAAASAAkAAAABAAEAAAASAAgAAAABAAEAAAATAAgAAAABAAEAAAAUAAgAAAABAAEAAAAVAAgAAAABAAEAAAAUAAcAAAABAAEAAAATAAcAAAABAAEAAAASAAcAAAABAAEAAAAVAAcAAAABAAEAAAAUAAYAAAABAAEAAAATAAYAAAABAAEAAAAVAAYAAAABAAEAAAAVAAUAAAABAAEAAAAWAAUAAAABAAEAAAA=")

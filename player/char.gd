@@ -35,6 +35,9 @@ func handle_jump(delta):
 			if air_jump < movement_data.nb_air_jump:
 				velocity.y = movement_data.jump_velocity
 				air_jump += 1
+	elif Input.is_action_just_released("ui_accept") and velocity.y < 0:
+		velocity.y = movement_data.jump_velocity / 4
+		
 	
 func handle_movment(delta, input_axis):
 	if input_axis:
@@ -67,7 +70,6 @@ func update_animation(input_axis):
 	if not is_on_floor():
 		if is_on_wall():
 			var wall_normal = get_wall_normal()
-			print(wall_normal)
 			animated_sprite_2d.play("walled")
 		else:
 			animated_sprite_2d.play("jump")
