@@ -1,6 +1,6 @@
 [gd_resource type="TileSet" load_steps=7 format=3 uid="uid://c870h5denjo8s"]
 
-[ext_resource type="Texture2D" uid="uid://c86ngqlhc67hb" path="res://Resources/tileset.png" id="1_qbqvu"]
+[ext_resource type="Texture2D" uid="uid://myg4nf2b2gm7" path="res://Resources/tileset.png" id="1_qbqvu"]
 [ext_resource type="Texture2D" uid="uid://o4imh1166fer" path="res://Resources/slopes.png" id="2_o02u0"]
 [ext_resource type="Texture2D" uid="uid://cncrshwm5o4si" path="res://Resources/slopes2.png" id="3_hmc85"]
 
@@ -152,7 +152,6 @@ texture = ExtResource("1_qbqvu")
 8:0/0/terrain = 0
 8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0/terrains_peering_bit/right_side = 0
-8:0/0/terrains_peering_bit/bottom_right_corner = 0
 8:0/0/terrains_peering_bit/bottom_side = 0
 8:0/0/terrains_peering_bit/left_side = 0
 9:0/0 = 0
@@ -383,10 +382,6 @@ texture = ExtResource("1_qbqvu")
 8:4/0/terrain_set = 0
 8:4/0/terrain = 0
 8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-8:4/0/terrains_peering_bit/right_side = 0
-8:4/0/terrains_peering_bit/bottom_side = 0
-8:4/0/terrains_peering_bit/left_side = 0
-8:4/0/terrains_peering_bit/top_side = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xpq5i"]
 resource_name = "slopes"
