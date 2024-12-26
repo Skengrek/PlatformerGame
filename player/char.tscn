@@ -75,6 +75,7 @@ size = Vector2(12, 9)
 size = Vector2(10, 9)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+safe_margin = 0.1
 script = ExtResource("1_swg0s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

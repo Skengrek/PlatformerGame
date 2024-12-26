@@ -10,9 +10,9 @@ var air_jump = 0
 func _physics_process(delta: float) -> void:
 	var input_axis := Input.get_axis("ui_left", "ui_right")
 	apply_gravity(delta)
-	handle_jump(delta)
+	handle_jump()
 	handle_movment(delta, input_axis)
-	update_animation(input_axis)
+	update_animation()
 	var was_on_floor = is_on_floor()
 	var was_on_wall = is_on_wall()
 	move_and_slide()
@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 		coyote_jump_timer.start()
 	var just_left_wall = was_on_wall and not is_on_wall() and velocity.y >= 0.0
 	
-func handle_jump(delta):
+func handle_jump():
 	if is_on_floor():
 		air_jump = 0
 	if Input.is_action_just_pressed("ui_accept"):
@@ -60,7 +60,7 @@ func apply_gravity(delta):
 		velocity += gravity * delta
 
 
-func update_animation(input_axis):
+func update_animation():
 	if velocity.x != 0:
 		animated_sprite_2d.flip_h = (velocity.x < 0)
 		animated_sprite_2d.play("run")
@@ -69,7 +69,6 @@ func update_animation(input_axis):
 	
 	if not is_on_floor():
 		if is_on_wall():
-			var wall_normal = get_wall_normal()
 			animated_sprite_2d.play("walled")
 		else:
 			animated_sprite_2d.play("jump")
