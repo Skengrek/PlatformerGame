@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://qlshjl1u3c0c"]
+[gd_scene load_steps=4 format=4 uid="uid://qlshjl1u3c0c"]
 
 [ext_resource type="PackedScene" uid="uid://dub1jyrgm31qr" path="res://world.tscn" id="1_skiiq"]
 [ext_resource type="PackedScene" uid="uid://cecykvtopnrf7" path="res://Hazards/spike.tscn" id="2_n1pxw"]
+[ext_resource type="PackedScene" uid="uid://dsm4ue3ttbfin" path="res://Hazards/bottom.tscn" id="3_tnwyy"]
 
 [node name="World" instance=ExtResource("1_skiiq")]
 
@@ -30,3 +31,6 @@ rotation = -6.28483
 [node name="Spike5" parent="." index="7" instance=ExtResource("2_n1pxw")]
 position = Vector2(181, 128)
 rotation = -9.42268
+
+[node name="Bottom" parent="." index="8" instance=ExtResource("3_tnwyy")]
+position = Vector2(78, 201)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=4 uid="uid://cbb5o3t1u3byx"]
+[gd_scene load_steps=7 format=4 uid="uid://cbb5o3t1u3byx"]
 
 [ext_resource type="PackedScene" uid="uid://dub1jyrgm31qr" path="res://world.tscn" id="1_hcgu6"]
 [ext_resource type="PackedScene" uid="uid://cecykvtopnrf7" path="res://Hazards/spike.tscn" id="2_efqa1"]
 [ext_resource type="PackedScene" uid="uid://qlshjl1u3c0c" path="res://level_two.tscn" id="2_gl336"]
 [ext_resource type="PackedScene" uid="uid://b4jytuw000d02" path="res://Hazards/heart.tscn" id="3_xbtb4"]
 [ext_resource type="PackedScene" uid="uid://b047vrbgjy4r4" path="res://level_tile_map.tscn" id="4_3iaum"]
+[ext_resource type="PackedScene" uid="uid://dsm4ue3ttbfin" path="res://Hazards/bottom.tscn" id="4_tbuvb"]
 
 [node name="LevelOne" instance=ExtResource("1_hcgu6")]
 next_level = ExtResource("2_gl336")
@@ -26,6 +27,9 @@ position = Vector2(8, 0)
 
 [node name="Spike2" parent="Spike/Spike/Spike" index="4" instance=ExtResource("2_efqa1")]
 position = Vector2(16, 0)
+
+[node name="Bottom" parent="Spike" index="4" instance=ExtResource("4_tbuvb")]
+position = Vector2(69, 41)
 
 [node name="Spike2" parent="." index="4" instance=ExtResource("2_efqa1")]
 position = Vector2(240, 144)
